@@ -27,3 +27,102 @@ Pista: si una regla "no hace nada", revisa que la regla de ARRIBA
 cierre su llave } y que cada declaración termine en punto y coma.
 ============================================================
 */
+
+/* Ejercicio 04 · Variables y base */
+:root {
+  --color-hoja: #2d6a4f;
+  --color-tierra: #582f0e;
+  --color-fondo: #f8f9fa;
+  --color-texto: #212529;
+  --color-alerta-abierto: #1b4332;
+  --color-alerta-cerrado: #b02a37;
+  --color-agotado: #6c757d;
+  --fuente-principal: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: var(--color-hoja);
+}
+
+/* 
+   Ejercicio 05 · Los tres selectores y los estados*/
+/* Selector de clase */
+.marca {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-hoja);
+  margin: 0;
+}
+
+/* Selector de ID */
+#visitanos {
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+/* Regla con :hover */
+a:hover {
+  color: var(--color-hoja);
+  text-decoration: underline;
+}
+
+/* Clases de estado que manipulará JavaScript */
+.abierto {
+  color: var(--color-alerta-abierto);
+  font-weight: bold;
+}
+
+.cerrado {
+  color: var(--color-alerta-cerrado);
+  font-weight: bold;
+}
+
+.agotado {
+  color: var(--color-agotado);
+  text-decoration: line-through;
+}
+
+/*Estilos visuales para el encabezado y navegación*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  list-style: none; /* Quita los puntos negros */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem; /* Alinea los enlaces en fila horizontal */
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: 500;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  background-color: var(--color-hoja);
+  text-decoration: none;
+}
